@@ -14,6 +14,7 @@ class Solution {
 			} else {
 				while (s.charAt(left) != curr) {
 					visited.remove(s.charAt(left++));
+					// This makes up O(2N) complexity to reduce to N we may use a map to directly jump to next valid index
 				}
 
 				left++;

@@ -4,16 +4,17 @@ class Solution {
 		int left = 0, right = 0, n = nums.length, flips = 0, maxLen = 0;
 
 		while (right < n) {
-			if (nums[right] == 0 && flips < k) {
-				flips++;
-			} else if (nums[right] == 0 && flips == k) {
-				while (nums[left] == 1) {
-					left++;
+			if(nums[right] == 0)flips++;
+			if(flips>k) {
+				// ensures constant windoe size of maxLen for invalid window
+				if(nums[left] == 0) {
+					flips--;
 				}
-				left++;
+				left ++;
 			}
 
-			maxLen = Math.max(maxLen, right - left + 1);
+
+			maxLen = Math.max(maxLen, right - left +1);
 			right++;
 
 		}
