@@ -1,3 +1,8 @@
+/*
+ * Maximum length of subarray so that it contain atmost K zeroes
+ * Leetcode: https://leetcode.com/problems/max-consecutive-ones-iii/
+ */
+
 class Solution {
 	public int longestOnes(int[] nums, int k) {
 
