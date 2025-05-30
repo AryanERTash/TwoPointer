@@ -15,17 +15,7 @@ class Solution {
 		return map;
 
 	}
-
-	public String makeMinString(String s, int start, int len) {
-		StringBuffer sb = new StringBuffer();
-		for (int i = start; i < start + len; i++) {
-			sb.append(s.charAt(i));
-
-		}
-
-		return sb.toString();
-	}
-
+	
 	public String minWindow(String s, String t) {
 		if (s == null || t == null || s.length() < t.length())
 			return "";
@@ -67,7 +57,7 @@ class Solution {
 
 		}
 
-		return minStart == -1 ? "" : makeMinString(s, minStart, minLength);
+		return minStart == -1 ? "" : s.substring(minStart, minStart+minLength);
 
 	}
 }
